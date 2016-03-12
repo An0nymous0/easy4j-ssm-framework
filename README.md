@@ -10,6 +10,7 @@
 ###用到的组件
 * SpringMvc
 * Mybatis
+* Druid
 * Mybatis Generator
 * Gradle
 * Guava
