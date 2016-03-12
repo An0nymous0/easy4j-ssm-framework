@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE generatorConfiguration
+                PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+                "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+<context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+
+    <!--Mybatis通用Mapper生成方式-->
+    <!--<plugin type="tk.mybatis.mapper.generator.MapperPlugin">-->
+        <!--<property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>-->
+        <!--&lt;!&ndash; caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true &ndash;&gt;-->
+        <!--<property name="caseSensitive" value="true"/>-->
+    <!--</plugin>-->
+
+
+    <commentGenerator>
+        <!-- This property is used to specify whether MBG will include any coments in the generated code -->
+        <property name="suppressAllComments" value="false"/>
+        <!-- This property is used to specify whether MBG will include the generation timestamp in the generated comments -->
+        <property name="suppressDate" value="true"/>
+        <property name="javaFileEncoding" value="utf-8"/>
+    </commentGenerator>
+
+    <jdbcConnection driverClass="${driverClass}"
+                    connectionURL="${connectionURL}"
+                    userId="${userId}"
+                    password="${password}">
+    </jdbcConnection>
+
+
+    <javaModelGenerator targetPackage="${modelPackage}" targetProject="${src_main_java}">
+    <!-- This property is used to select whether MyBatis Generator will generate different Java packages for
+     the objects based on the catalog and schema of the introspected table -->
+    <property name="enableSubPackages" value="false"/>
+    <!-- This property is used to select whether MyBatis Generator adds code to trim the white space from character fields returned from the database -->
+    <property name="trimStrings" value="true"/>
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="${sqlMapperPackage}" targetProject="${src_main_resources}">
+        <!-- This property is used to select whether MyBatis Generator will generate different Java packages for
+  the objects based on the catalog and schema of the introspected table -->
+        <property name="enableSubPackages" value="false"/>
+    </sqlMapGenerator>
+
+    <javaClientGenerator targetPackage="${mapperPackage}" targetProject="${src_main_java}" type="XMLMAPPER">
+        <!-- This property is used to select whether MyBatis Generator will generate different Java packages for
+ the objects based on the catalog and schema of the introspected table -->
+        <property name="enableSubPackages" value="false"/>
+    </javaClientGenerator>
+
+    <!-- sql占位符，表示所有的表 -->
+    <!--<table tableName="%">-->
+        <!--<generatedKey column="epa_id" sqlStatement="Mysql" identity="true" />-->
+    <!--</table>-->
+    <table tableName="demo" enableCountByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false"
+           enableUpdateByExample="false">
+        <property name="useActualColumnNames" value="true"/>
+    </table>
+</context>
+</generatorConfiguration>
