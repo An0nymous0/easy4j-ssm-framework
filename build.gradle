@@ -25,10 +25,10 @@ repositories {
 dependencies {
     //maven仓库中心没有的jar，则放入libs目录下
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'org.springframework:spring-webmvc:+'
-    compile 'org.springframework:spring-tx:+'
-    compile 'org.springframework:spring-jdbc:+'
-    compile 'org.springframework:spring-context-support:+'
+    compile 'org.springframework:spring-webmvc:4.+'
+    compile 'org.springframework:spring-tx:4.+'
+    compile 'org.springframework:spring-jdbc:4.+'
+    compile 'org.springframework:spring-context-support:4.+'
     compile 'com.google.guava:guava:+'
     compile 'mysql:mysql-connector-java:+'
     compile 'com.alibaba:druid:+'
