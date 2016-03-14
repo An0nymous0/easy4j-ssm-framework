@@ -52,10 +52,15 @@
     <!--<table tableName="%">-->
         <!--<generatedKey column="epa_id" sqlStatement="Mysql" identity="true" />-->
     <!--</table>-->
-    <table tableName="demo" enableCountByExample="false" enableDeleteByExample="false"
-           enableSelectByExample="false"
-           enableUpdateByExample="false">
-        <property name="useActualColumnNames" value="true"/>
+    <!--<table tableName="demo" enableCountByExample="false" enableDeleteByExample="false"-->
+           <!--enableSelectByExample="false"-->
+           <!--enableUpdateByExample="false">-->
+        <!--<property name="useActualColumnNames" value="true"/>-->
+    <!--</table>-->
+    <table tableName="ybs_user" enableCountByExample="false" enableDeleteByExample="false"
+    enableSelectByExample="false"
+    enableUpdateByExample="false">
+    <property name="useActualColumnNames" value="true"/>
     </table>
 </context>
 </generatorConfiguration>

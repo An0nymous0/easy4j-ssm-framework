@@ -29,6 +29,7 @@ dependencies {
     compile 'org.springframework:spring-tx:4.+'
     compile 'org.springframework:spring-jdbc:4.+'
     compile 'org.springframework:spring-context-support:4.+'
+    compile 'org.aspectj:aspectjweaver:+'
     compile 'com.google.guava:guava:+'
     compile 'mysql:mysql-connector-java:+'
     compile 'com.alibaba:druid:+'
